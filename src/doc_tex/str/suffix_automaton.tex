@@ -1,19 +1,22 @@
+\begin{itemize}
 \item application 0\\
-检查字符串t是否出现,如果未出现返回0,如果出现则返回该串所对应状态编号u
+检查字符串 \verb|t| 是否出现,如果未出现返回 \verb|0|, 如果出现则返回该串所对应状态编号 \verb|u|
 
 \item application 1\\
-求不同子串个数,答案即sam.st.sz[0] - 1
+求不同子串个数,答案即 \verb|sam.st.sz[0] - 1|
 
 \item application 2\\
-求每一个endpos内部串的出现次数, 答案即sam.st.times[i]
+求每一个 \verb|endpos| 内部串的出现次数, 答案即 \verb|sam.st.times[i]|
 
 \item application 3\\
-求每个状态的第一次出现这个状态的末端的位置sam.st.firstpos
+求每个状态的第一次出现这个状态的末端的位置 \verb|sam.st.firstpos|
 
-对于字符串t,调用search(t)后,第一次出现的位置即sam.st.firstpos[u] - |P| + 1
+对于字符串 \verb|t|, 调用 \verb|search(t)| 后, 第一次出现的位置即 \begin{verbatim}sam.st.firstpos[u] - |P| + 1\end{verbatim}
 
-t的每一个出现位置:在后缀链接上遍历所有以状态u为后缀的非克隆状态v,答案即{sam.st.firstpos[v] - |P| + 1}
+\verb|t| 的每一个出现位置: 在后缀链接上遍历所有以状态 \verb|u| 为后缀的非克隆状态 \verb|v|, 答案即 \begin{verbatim}sam.st.firstpos[v] - |P| + 1\end{verbatim}
 
 \item application others\\
-字典序第 k 大子串: sam上dp
-所有不同子串的总长度: sam上dp
+字典序第 \verb|k| 大子串: SAM 上 DP
+所有不同子串的总长度: SAM 上 DP
+
+\end{itemize}
